@@ -14,32 +14,28 @@ class bank {
         this.balance = balance;
         this.accno = accno;
     }
-    void startAccount(String cusString,int accno){
-        this.custName = custName;
-        this.accno  =  accno;
-        this.balance = 0;
-    }
+ 
     void depositCash(){
-        System.out.println("Enter amount to be deposited : ");
+        System.out.println("Enter amount to be deposited : \n");
         Scanner scanner =  new Scanner(System.in);
         int cashdep = scanner.nextInt();
         balance += cashdep;
         printBalance();
     }
     void withdraw(){
-        System.out.println("Enter amount to be deposited : ");
+        System.out.println("Enter amount to be deposited : \n");
         Scanner scanner =  new Scanner(System.in);
         int cshwtdr = scanner.nextInt();
         if(cshwtdr<=balance){
             balance -= cshwtdr;
             printBalance();
         }
-        else
-        System.out.println("insufficient balance");
+`        else
+        System.out.println("insufficient balance\n");
     }
     void printBalance(){
         System.out.println("hi! "+custName+" ,"+accno);
-        System.out.println("you have rs"+ balance+" as balance");
+        System.out.println("you have rs"+ balance+" as balance\n");
     }
 
 }
@@ -52,34 +48,27 @@ public class bank_additional {
             int choice;
             Scanner scanner =  new Scanner(System.in);
             bank cust = new bank();
-            System.out.println("Enter your name : ");
+            System.out.println("Enter your name : \n");
             String Name = scanner.nextLine();
-            System.out.println("Enter account number : ");
+            System.out.println("Enter account number : \n");
             int accn = scanner.nextInt();
-            System.out.println("Do you want do deposit money : ");
-            char ch = scanner.next().charAt(0);
-            if(ch == 'y'|| ch == 'Y')
-           {
-            System.out.println("Enter the amount : "); 
+            System.out.println("Enter the amount : \n"); 
             double balance = scanner.nextDouble();
             cust.startAccount(Name,accn,balance);}
-            else    
-            {
-                cust.startAccount(Name,accn);
-            }
+           
 
             do{
-                System.out.println("1.DEPOSIT\n2.WITHDRAW\n3.GET BALANCE\n0.EXIT");
-                choice = scanner.nextInt();
-                switch(choice){
+                System.out.println("1.DEPOSIT\n2.WITHDRAW\n3.GET BALANCE\n0.EXIT\n");
+                ch = scanner.nextInt();
+                switch(ch){
                     case 1: cust.depositCash();
                             break;
                     case 2: cust.withdraw();
                             break;
                     case 3: cust.printBalance();
                             break;
-                    default: System.out.println("ENTER A VALID CHOICE");
+                    default: System.out.println("ENTER A VALID CHOICE\n");
                 }
-            }while(choice !=0);
+            }while(ch !=0);
         }
 }

@@ -4,7 +4,7 @@ class matrix_value {
     int b[][] = new int[10][10];
     int c[][] = new int[10][10];
     int m1,n1,m2,n2;
-    matrix(int m1,int n1,int m2,int n2){
+    matrix_value(int m1,int n1,int m2,int n2){
         this.m1 = n1;
         this.n1 = n1;
         this.m2 = n2;
@@ -57,7 +57,7 @@ class matrix_value {
         }
     }
 }
-public class martix{
+public class lab2_matrix{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of rows and columns");
