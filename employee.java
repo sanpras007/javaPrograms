@@ -1,3 +1,4 @@
+import java.util.*;
 class Employee {
     String Name,address;
     int age,phoneno;
@@ -8,13 +9,13 @@ class Employee {
 }
 class Officer extends Employee{
     String Specialization;
-    Officer(String n,String a,int p,float s,int ag,String speci){
-        Name =  n;
-        address = a;
-        phoneno = p;
-        salary = s;
-        age = ag;
-        Specialization = speci;
+    Officer(String Name,String address,int phoneno,float salary,int age,String Specialization){
+        this.Name =  Name;
+        this.address = address;
+        this.phoneno = phoneno;
+        this.salary = salary;
+        this.age = age;
+        this.Specialization = Specialization;
     }
     void print_details(){
         System.out.println("hi..officer "+Name+" you are "+age+" years old and residing at "+address+". You are specialized at "+ Specialization+" and working here with the salary of "+print_salary()+" and anyone can contact you @ "+phoneno);
