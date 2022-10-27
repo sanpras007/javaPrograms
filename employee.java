@@ -1,10 +1,3 @@
-import java.net.SocketTimeoutException;
-import java.util.Scanner;
-import java.util.jar.Attributes.Name;
-
-import javax.print.event.PrintEvent;
-import javax.xml.stream.XMLOutputFactory;
-
 class Employee {
     String Name,address;
     int age,phoneno;
